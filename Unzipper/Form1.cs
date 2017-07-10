@@ -16,10 +16,14 @@ namespace Unzipper
 {
     public partial class Form1 : Form
     {
-        public string selectedArchivePath;
+        private string selectedArchivePath;
+        private readonly IExtractor _extractor;
+        private readonly IFileManager _fileManager;
 
-        public Form1()
+        public Form1(IFileManager fileManager, IExtractor extractor)
         {
+            _fileManager = fileManager;
+            _extractor = extractor;
             InitializeComponent();
         }
         
@@ -44,11 +48,11 @@ namespace Unzipper
                 return;
             }
 
-            var files = FileSystemMananger.DirSearch(this.selectedArchivePath);
+            var files = _fileManager.DirSearch(this.selectedArchivePath).Take(60);
 
             foreach (var file in files)
             {
-                var filepath = await Utils.Unzipper.ExtractAsync(file);
+                var filepath = await _extractor.ExtractAsync(file);
                 unarchivedItemsListBox.Items.Add(filepath);
             }
             
@@ -65,7 +69,7 @@ namespace Unzipper
                 return;
             }
 
-            Utils.FileSystemMananger.OpenFile(selectedPath);
+            _fileManager.OpenFile(selectedPath);
         }
     }
 }

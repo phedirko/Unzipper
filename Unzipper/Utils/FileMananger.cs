@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace Unzipper.Utils
 {
-    public class FileSystemMananger
+    public class FileMananger : IFileManager
     {
-        public static void OpenFile(string path)
+        public void OpenFile(string path)
         {
             Process.Start(path);
         }
 
-        public static List<String> DirSearch(string path)
+        public IEnumerable<string> DirSearch(string path)
         {
-            List<String> files = new List<String>();
+            List<string> files = new List<String>();
             try
             {
                 foreach (string f in Directory.GetFiles(path))
