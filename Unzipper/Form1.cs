@@ -48,11 +48,13 @@ namespace Unzipper
                 return;
             }
 
+            bool deletefls = DeleteFiles();
+
             var files = _fileManager.DirSearch(this.selectedArchivePath).Take(60);
 
             foreach (var file in files)
             {
-                var filepath = await _extractor.ExtractAsync(file);
+                var filepath = await _extractor.ExtractAsync(file, deletefls);
                 unarchivedItemsListBox.Items.Add(filepath);
             }
             
@@ -70,6 +72,18 @@ namespace Unzipper
             }
 
             _fileManager.OpenFile(selectedPath);
+        }
+
+        private bool DeleteFiles()
+        {
+            DialogResult dialogResult = MessageBox.Show("Delete archive files after uncompressing?",
+                "Delete files", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+                return true;
+            else
+                return false;
+
         }
     }
 }

@@ -8,6 +8,6 @@ namespace Unzipper.Utils
 {
     public interface IExtractor
     {
-        Task<string> ExtractAsync(string path);
+        Task<string> ExtractAsync(string path, bool deleteFiles);
     }
 }

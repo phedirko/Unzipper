@@ -11,12 +11,12 @@ namespace Unzipper.Utils
 {
     public class Extractor : IExtractor
     {
-        public Task<string> ExtractAsync(string path)
+        public Task<string> ExtractAsync(string path, bool deleteFiles)
         {
-            return Task.Run(() => Extract(path));
+            return Task.Run(() => Extract(path, deleteFiles));
         }
 
-        private string Extract(string path)
+        private string Extract(string path, bool deleteFiles)
         {
             FileInfo archiveFile = new FileInfo(path);
 
@@ -43,7 +43,19 @@ namespace Unzipper.Utils
 
             }
 
+            if (deleteFiles)
+            {
+                Task.Run(() => DeleteFiles(path));
+            }
+
             return outFileName;
         }
+
+
+        private void DeleteFiles(string arg)
+        {
+            File.Delete(arg);
+        }
+
     }
 }

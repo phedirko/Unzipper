@@ -39,7 +39,7 @@
             // 
             // buttonPathSelect
             // 
-            this.buttonPathSelect.Location = new System.Drawing.Point(12, 226);
+            this.buttonPathSelect.Location = new System.Drawing.Point(12, 256);
             this.buttonPathSelect.Name = "buttonPathSelect";
             this.buttonPathSelect.Size = new System.Drawing.Size(75, 23);
             this.buttonPathSelect.TabIndex = 2;
@@ -49,7 +49,7 @@
             // 
             // buttonExtract
             // 
-            this.buttonExtract.Location = new System.Drawing.Point(107, 226);
+            this.buttonExtract.Location = new System.Drawing.Point(93, 256);
             this.buttonExtract.Name = "buttonExtract";
             this.buttonExtract.Size = new System.Drawing.Size(75, 23);
             this.buttonExtract.TabIndex = 3;
@@ -60,14 +60,14 @@
             // unarchivedItemsListBox
             // 
             this.unarchivedItemsListBox.FormattingEnabled = true;
-            this.unarchivedItemsListBox.Location = new System.Drawing.Point(13, 12);
+            this.unarchivedItemsListBox.Location = new System.Drawing.Point(12, 12);
             this.unarchivedItemsListBox.Name = "unarchivedItemsListBox";
-            this.unarchivedItemsListBox.Size = new System.Drawing.Size(259, 199);
+            this.unarchivedItemsListBox.Size = new System.Drawing.Size(408, 199);
             this.unarchivedItemsListBox.TabIndex = 7;
             // 
             // showFileButton
             // 
-            this.showFileButton.Location = new System.Drawing.Point(199, 226);
+            this.showFileButton.Location = new System.Drawing.Point(345, 256);
             this.showFileButton.Name = "showFileButton";
             this.showFileButton.Size = new System.Drawing.Size(75, 23);
             this.showFileButton.TabIndex = 6;
@@ -79,9 +79,9 @@
             // 
             this.choosenDirStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelChoosenDir});
-            this.choosenDirStatusStrip.Location = new System.Drawing.Point(0, 282);
+            this.choosenDirStatusStrip.Location = new System.Drawing.Point(0, 285);
             this.choosenDirStatusStrip.Name = "choosenDirStatusStrip";
-            this.choosenDirStatusStrip.Size = new System.Drawing.Size(284, 22);
+            this.choosenDirStatusStrip.Size = new System.Drawing.Size(432, 22);
             this.choosenDirStatusStrip.TabIndex = 8;
             this.choosenDirStatusStrip.Text = "choosenDirStatusStrip";
             // 
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 304);
+            this.ClientSize = new System.Drawing.Size(432, 307);
             this.Controls.Add(this.choosenDirStatusStrip);
             this.Controls.Add(this.showFileButton);
             this.Controls.Add(this.unarchivedItemsListBox);
