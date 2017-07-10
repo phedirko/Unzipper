@@ -11,22 +11,13 @@ namespace Unzipper.Utils
 {
     public static class Unzipper
     {
-        public static async Task ExtractList(IEnumerable<string> files)
+
+        public static Task<string> ExtractAsync(string path)
         {
-            List<Task> tasks = new List<Task>();
-
-            foreach (var file in files)
-            {
-                tasks.Add(Task.Factory.StartNew(() => Extractor(file)));
-                //Extractor(file);
-            }
-
-            await Task.WhenAll(tasks);
-
-            var ds = tasks;
+            return Task.Run(() => Extractor(path));
         }
 
-        public static string Extractor(string path)
+        private static string Extractor(string path)
         {
             FileInfo archiveFile = new FileInfo(path);
 
@@ -48,11 +39,6 @@ namespace Unzipper.Utils
             }
 
             return outFileName;
-        }
-
-        public static Task<string> ExtractAsync(string path)
-        {
-            return Task.Run(() => Extractor(path));
         }
     }
 }

@@ -32,7 +32,6 @@ namespace Unzipper
             if (fld.ShowDialog() == DialogResult.OK)
             {
                 this.selectedArchivePath = fld.SelectedPath;
-
                 toolStripStatusLabelChoosenDir.Text = $"Selected archive: {selectedArchivePath}";
             }
         }
@@ -45,8 +44,7 @@ namespace Unzipper
                 return;
             }
 
-            var files = FileSystemMananger.DirSearch(this.selectedArchivePath)
-                .Take(240);
+            var files = FileSystemMananger.DirSearch(this.selectedArchivePath);
 
             foreach (var file in files)
             {
