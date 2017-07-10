@@ -1,0 +1,11 @@
+C:\Users\mycredit\Source\Repos\Downloader\Unzipper\Unzipper\bin\Debug\Unzipper.exe.config
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\bin\Debug\Unzipper.exe.config
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\bin\Debug\Unzipper.exe
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\bin\Debug\Unzipper.pdb
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\obj\Debug\Unzipper.csprojResolveAssemblyReference.cache
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\obj\Debug\Unzipper.Form1.resources
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\obj\Debug\Unzipper.Properties.Resources.resources
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\obj\Debug\Unzipper.csproj.GenerateResource.Cache
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\obj\Debug\Unzipper.exe
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\obj\Debug\Unzipper.pdb
+C:\Users\mycredit\Source\Repos\Unzipper\Unzipper\bin\Debug\ICSharpCode.SharpZipLib.dll
