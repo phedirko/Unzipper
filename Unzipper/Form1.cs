@@ -50,7 +50,7 @@ namespace Unzipper
 
             bool deletefls = DeleteFiles();
 
-            var files = _fileManager.DirSearch(this.selectedArchivePath).Take(60);
+            var files = _fileManager.DirSearch(this.selectedArchivePath);
 
             foreach (var file in files)
             {
